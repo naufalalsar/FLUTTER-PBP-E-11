@@ -11,7 +11,7 @@
 
 # Cerita Aplikasi:
 
-Aplikasi ini dirancang untuk membantu orang untuk mengelola keuangan. aplikasi ini memiliki beberapa fitur yaitu dompet untuk pengeluaran dan pemasukan, forum berguna untuk bertanya-tanya seputar keuangan, berita finansial berguna untuk memberikan berita terkini tentang finansial, kurs untuk mengkonversi satu mata uang ke mata uang lainnya, dan donasi berguna untuk memberikan uang kepada pendonasian.
+Aplikasi ini dirancang untuk membantu sekelompok untuk mengelola keuangan. aplikasi ini memiliki beberapa fitur yaitu dompet untuk pengeluaran dan pemasukan yang ada pada kelompok tersebut, FGD berguna untuk bertanya-tanya seputar keuangan yang terdapat pada kelompok, berita finansial berguna untuk memberikan berita terkini tentang finansial pada linhkup kelompok, Untuk mengkonversi satu mata uang ke uang mata lainnya serta menampilkan tabel daftar konversi mata uang. Data kurs diambil dari backend django yang telah dibuat pada tugas proyek tengah semester sebelumnya, dan donasi berguna untuk memberikan uang kepada pendonasian.
 
 # Fitur:
 
@@ -19,9 +19,9 @@ Aplikasi ini dirancang untuk membantu orang untuk mengelola keuangan. aplikasi i
 
 Modul yang menampilkan keuangan pengguna saat ini. Pengeluaran/pemasukan Input nominal pengeluaran dan pemasukan dalam dompet berdasarkan tempat penyimpanan uang.
 
-- Forum
+- FGD
 
-Forum diskusi antara user dan dapat mereply forum
+Forum yang digunakan untuk berdiskusi secara bebas pada kelompok
 
 - Berita Finansial
 
@@ -36,14 +36,19 @@ Untuk mengkonversi satu mata uang ke uang mata lainnya serta menampilkan tabel d
 Pengguna bisa mendonasikan sejumlah uangnya dan terintegrasi ke dompet kita (kalau uangnya kurang bakal dikasih warning). Yang buka donasi user dan ada deskripsi.
 
 
-Dompet (Fada)
+Dompet
+Fitur ini dikerjakan oleh Aushaaf Fadhilah Azzah 
 
-Forum (Denel)
+FGD
+Fitur ini dikerjakan oleh Muhammad Rayhan Denel
 
-Berita (Nopal)
+Berita
+Fitur ini dikerjakan oleh Muhammad Naufal Zaky Alsar
 
-Kurs (Ferry)
+Kurs
+Fitur ini dikerjakan oleh Mohammad Ferry Husnil Arif
 
-Donasi (Bimo)
+Donasi
+Fitur ini dikerjakan oleh Bimo Priyohutomo
 
 
