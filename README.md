@@ -11,7 +11,7 @@
 
 # Cerita Aplikasi:
 
-Aplikasi ini dirancang untuk membantu orang untuk mengelola keuangan. aplikasi ini memiliki beberapa fitur yaitu Dompet (untuk informasi keuangan terkini), Forum pengeluaran/pemasukan, Untuk mengkonversi satu mata uang ke uang mata lainnya (yang menentukan nilai kurs adalah admin), Berita Finansial Berita finansial yang diberikan oleh admin ada kategori juga untuk berita, Donasi Pengguna bisa mendonasikan sejumlah uangnya dan terintegrasi ke dompet kita (kalau uangnya kurang bakal dikasih warning)
+Aplikasi ini dirancang untuk membantu orang untuk mengelola keuangan. aplikasi ini memiliki beberapa fitur yaitu dompet untuk pengeluaran dan pemasukan, forum berguna untuk bertanya-tanya seputar keuangan, berita finansial berguna untuk memberikan berita terkini tentang finansial, kurs untuk mengkonversi satu mata uang ke mata uang lainnya, dan donasi berguna untuk memberikan uang kepada pendonasian.
 
 # Fitur:
 
@@ -34,3 +34,11 @@ Untuk mengkonversi satu mata uang ke uang mata lainnya
 - Donasi
 
 Pengguna bisa mendonasikan sejumlah uangnya dan terintegrasi ke dompet kita (kalau uangnya kurang bakal dikasih warning). Yang buka donasi user dan ada deskripsi.
+
+Dompet (Fada)
+Forum (Denel)
+Berita (Nopal)
+Kurs (Ferry)
+Donasi (Bimo)
+
+Untuk Berita nantinya akan digunakan method post dan get untuk melakukan transaksi data dengan server.
