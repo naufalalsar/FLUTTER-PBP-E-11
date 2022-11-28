@@ -21,7 +21,7 @@ Modul yang menampilkan keuangan pengguna saat ini. Pengeluaran/pemasukan Input n
 
 - FGD
 
-focus group discussion merupakan tempat untuk mendisuksikan terkait sesuatu mengenai keuangan
+Forum yang digunakan untuk berdiskusi secara bebas pada kelompok
 
 - Berita Finansial
 
@@ -37,17 +37,18 @@ Pengguna bisa mendonasikan sejumlah uangnya dan terintegrasi ke dompet kita (kal
 
 
 Dompet
-Fitur ini akan dikerjakan oleh Aushaaf Fadhilah Azzah
+Fitur ini dikerjakan oleh Aushaaf Fadhilah Azzah 
 
 FGD
-FItur ini akan dikerjakan oleh Muhammad Rayhan Dene
+Fitur ini dikerjakan oleh Muhammad Rayhan Denel
 
 Berita
-Fitur ini akan dikerjakan oleh Muhammad Naufal Zaky Alsar
+Fitur ini dikerjakan oleh Muhammad Naufal Zaky Alsar
 
 Kurs
-Fitur ini akan dikerjakan oleh Mohammad Ferry Husnil Arif
+Fitur ini dikerjakan oleh Mohammad Ferry Husnil Arif
 
 Donasi
-Fitur ini akan dikerjakan oleh Bimo Priyohutomo
+Fitur ini dikerjakan oleh Bimo Priyohutomo
+
 
