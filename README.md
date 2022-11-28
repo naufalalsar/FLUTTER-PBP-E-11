@@ -29,7 +29,7 @@ Berita finansial yang diberikan oleh admin ada kategori juga untuk berita
 
 - Kurs
 
-Untuk mengkonversi satu mata uang ke uang mata lainnya
+Untuk mengkonversi satu mata uang ke uang mata lainnya serta menampilkan tabel daftar konversi mata uang. Data kurs diambil dari backend django yang telah dibuat pada tugas proyek tengah semester sebelumnya
 
 - Donasi
 
