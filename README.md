@@ -33,7 +33,7 @@ Untuk mengkonversi satu mata uang ke uang mata lainnya serta menampilkan tabel d
 
 - Donasi
 
-Pengguna bisa mendonasikan sejumlah uangnya dan terintegrasi ke dompet kita (kalau uangnya kurang bakal dikasih warning). Yang buka donasi user dan ada deskripsi.
+Pengguna bisa melihat apa saja donasi yang sedang berlangsung. Data donasi diambil (get) dari json django pada tugas kelompok sebelumnya.
 
 
 Dompet
