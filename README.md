@@ -9,15 +9,15 @@
 - Bimo Priyohutomo (2106708444)
 - Aushaaf Fadhilah Azzah (2106630063)
 
-# Cerita Aplikasi:
+## Cerita Aplikasi:
 
 Aplikasi ini dirancang untuk membantu sekelompok untuk mengelola keuangan. aplikasi ini memiliki beberapa fitur yaitu dompet untuk pengeluaran dan pemasukan yang ada pada kelompok tersebut, FGD berguna untuk bertanya-tanya seputar keuangan yang terdapat pada kelompok, berita finansial berguna untuk memberikan berita terkini tentang finansial pada linhkup kelompok, Untuk mengkonversi satu mata uang ke uang mata lainnya serta menampilkan tabel daftar konversi mata uang. Data kurs diambil dari backend django yang telah dibuat pada tugas proyek tengah semester sebelumnya, dan donasi berguna untuk memberikan uang kepada pendonasian.
 
-# Fitur:
+## Fitur:
 
 - Dompet
 
-Modul yang menampilkan keuangan pengguna saat ini. Pengeluaran/pemasukan Input nominal pengeluaran dan pemasukan dalam dompet berdasarkan tempat penyimpanan uang.
+Modul yang menampilkan detail arus keuangan pengguna saat ini. Pengguna dapat menginput catatan arus keuangan, yakni pemasukan/pengeluaran beserta nominal dan keterangan terkait catatan tersebut.
 
 - FGD
 
@@ -35,20 +35,26 @@ Untuk mengkonversi satu mata uang ke uang mata lainnya serta menampilkan tabel d
 
 Pengguna bisa melihat apa saja donasi yang sedang berlangsung. Data donasi diambil (get) dari json django pada tugas kelompok sebelumnya.
 
+## Pembagian Tugas:
 
-Dompet
+- Dompet
+
 Fitur ini dikerjakan oleh Aushaaf Fadhilah Azzah 
 
-FGD
+- FGD
+
 Fitur ini dikerjakan oleh Muhammad Rayhan Denel
 
-Berita
+- Berita
+
 Fitur ini dikerjakan oleh Muhammad Naufal Zaky Alsar
 
-Kurs
+- Kurs
+
 Fitur ini dikerjakan oleh Mohammad Ferry Husnil Arif
 
-Donasi
+- Donasi
+
 Fitur ini dikerjakan oleh Bimo Priyohutomo
 
 
