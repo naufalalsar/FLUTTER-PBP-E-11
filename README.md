@@ -35,6 +35,7 @@ Untuk mengkonversi satu mata uang ke uang mata lainnya
 
 Pengguna bisa mendonasikan sejumlah uangnya dan terintegrasi ke dompet kita (kalau uangnya kurang bakal dikasih warning). Yang buka donasi user dan ada deskripsi.
 
+
 Dompet (Fada)
 
 Forum (Denel)
@@ -44,5 +45,6 @@ Berita (Nopal)
 Kurs (Ferry)
 
 Donasi (Bimo)
+
 
 Untuk Berita nantinya akan digunakan method post dan get untuk melakukan transaksi data dengan server.
