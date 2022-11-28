@@ -25,7 +25,7 @@ Forum diskusi antara user dan dapat mereply forum
 
 - Berita Finansial
 
-Berita finansial yang diberikan oleh admin ada kategori juga untuk berita. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester.
+Berita finansial merupakan berita terkini tentang finansial yang ada kategorinya untuk dapat memfilter berita berdasarkan kategori. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester.
 
 - Kurs
 
