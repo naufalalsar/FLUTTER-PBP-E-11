@@ -25,7 +25,7 @@ Forum diskusi antara user dan dapat mereply forum
 
 - Berita Finansial
 
-Berita finansial yang diberikan oleh admin ada kategori juga untuk berita
+Berita finansial yang diberikan oleh admin ada kategori juga untuk berita. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester.
 
 - Kurs
 
@@ -47,4 +47,3 @@ Kurs (Ferry)
 Donasi (Bimo)
 
 
-Untuk Berita nantinya akan digunakan method post dan get untuk melakukan transaksi data dengan server.
