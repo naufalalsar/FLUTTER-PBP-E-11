@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1049216663653",
+    "project_id": "saku-in",
+    "storage_bucket": "saku-in.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049216663653:android:5be9a2c61d2d91d87a868c",
+        "android_client_info": {
+          "package_name": "com.example.saku_in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049216663653-8au36ltepl5t13ftdapr9bbnjhu4115u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYS_SXCSa3Q-PUAM6zHwh3raDtwkhFOZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049216663653-8au36ltepl5t13ftdapr9bbnjhu4115u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
