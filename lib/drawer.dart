@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:saku_in/dompet/dompet_page.dart';
 import 'package:saku_in/forum/forum_page.dart';
 import 'package:saku_in/berita/berita_page.dart';
-import 'package:saku_in/kurs/kurs_page.dart';
+import 'package:saku_in/kurs/page/kurs_page.dart';
 import 'package:saku_in/donasi/donasi_page.dart';
 import 'package:saku_in/main.dart';
 
+
 class TheSideBar extends StatelessWidget {
-  const TheSideBar();
+  const TheSideBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: const Color(0xff03fca1),
       child: Column(
         children: [
           // Menambahkan clickable menu
@@ -22,7 +24,7 @@ class TheSideBar extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const MyHomePage(title: "counter_7")),
+                    builder: (context) => const MyHomePage(title: "Saku In")),
               );
             },
           ),
@@ -36,7 +38,7 @@ class TheSideBar extends StatelessWidget {
               );
             },
           ),
-                ListTile(
+          ListTile(
             title: const Text('Forum'),
             onTap: () {
               // Route menu ke halaman form
@@ -46,7 +48,7 @@ class TheSideBar extends StatelessWidget {
               );
             },
           ),
-                ListTile(
+          ListTile(
             title: const Text('Donasi'),
             onTap: () {
               // Route menu ke halaman form
@@ -56,7 +58,7 @@ class TheSideBar extends StatelessWidget {
               );
             },
           ),
-                ListTile(
+          ListTile(
             title: const Text('Kurs'),
             onTap: () {
               // Route menu ke halaman form
@@ -66,7 +68,7 @@ class TheSideBar extends StatelessWidget {
               );
             },
           ),
-                ListTile(
+          ListTile(
             title: const Text('Dompet'),
             onTap: () {
               // Route menu ke halaman form
