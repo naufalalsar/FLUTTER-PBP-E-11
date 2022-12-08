@@ -34,7 +34,6 @@ class Berita {
 
 class Fields {
     Fields({
-        required this.user,
         required this.title,
         required this.content,
         required this.category,
@@ -43,7 +42,6 @@ class Fields {
         required this.source,
     });
 
-    int user;
     String title;
     String content;
     String category;
@@ -52,7 +50,6 @@ class Fields {
     String source;
 
     factory Fields.fromJson(Map<String, dynamic> json) => Fields(
-        user: json["user"],
         title: json["title"],
         content: json["content"],
         category: json["category"],
@@ -62,7 +59,6 @@ class Fields {
     );
 
     Map<String, dynamic> toJson() => {
-        "user": user,
         "title": title,
         "content": content,
         "category": category,

@@ -1,6 +1,7 @@
 import 'package:saku_in/berita/berita_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'dart:async';
 
 Future<List<Berita>> fetchBerita() async {
   var url = Uri.parse('https://saku-in.up.railway.app/berita/json/');
@@ -24,4 +25,16 @@ Future<List<Berita>> fetchBerita() async {
   }
 
   return listWatchList;
+}
+
+void createBerita(String title, String content, String category, String writer,
+    String source) async {
+  final response = await http
+      .post(Uri.parse('https://saku-in.up.railway.app/berita/add/'), body: {
+    'title': title,
+    'content': content,
+    'category': category,
+    'writer': writer,
+    'source': source,
+  });
 }
