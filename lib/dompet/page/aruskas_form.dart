@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:saku_in/dompet/util/create_aruskas.dart';
 import 'package:saku_in/main.dart';
 import 'package:saku_in/drawer.dart';
 import 'package:saku_in/dompet/model/dompet.dart';
