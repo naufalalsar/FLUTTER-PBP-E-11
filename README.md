@@ -29,7 +29,7 @@ Berita finansial merupakan berita terkini tentang finansial. Untuk berita akan d
 
 - Kurs
 
-Untuk mengkonversi satu mata uang ke uang mata lainnya serta menampilkan tabel daftar konversi mata uang. Data kurs diambil dari backend django yang telah dibuat pada tugas proyek tengah semester sebelumnya
+Menampilkan data kurs negara G-20. Data kurs diambil dari backend django yang telah dibuat pada tugas proyek tengah semester sebelumnya.
 
 - Donasi
 
