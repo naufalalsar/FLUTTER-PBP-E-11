@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:saku_in/drawer.dart';
 import 'package:saku_in/kurs/page/detail_kurs_page.dart';
+import 'package:saku_in/kurs/page/exchange_rate_page.dart';
 import 'package:saku_in/kurs/util/fetch_exchange.dart';
 
 class KursPage extends StatefulWidget {
@@ -19,11 +20,18 @@ class _MyDataState extends State<KursPage> {
         appBar: AppBar(
           title: const Text("Kurs"),
         ),
-        backgroundColor: const Color(0xff03fca1),
         // Menambahkan drawer menu
         drawer: const TheSideBar(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ExchangeRatePage()));
+            },
+          tooltip: 'Increment',
+          child: const Icon(Icons.calculate),
+        ),
         body: Padding(
-          padding: const EdgeInsets.all(32.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: FutureBuilder(
               future: _fetchExchange,
               builder: (context, AsyncSnapshot snapshot) {

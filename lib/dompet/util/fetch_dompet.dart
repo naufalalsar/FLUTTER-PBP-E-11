@@ -15,7 +15,6 @@ Future<Dompet> fetchDompet() async {
   var data = jsonDecode(utf8.decode(response.bodyBytes));
 
   Dompet dompet = Dompet.fromJson(data);
-  print(dompet);
 
   return dompet;
 }

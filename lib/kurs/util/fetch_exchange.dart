@@ -21,6 +21,5 @@ Future<List<Exchange>> fetchExchange() async {
     }
   }
 
-  print(exchange);
   return exchange;
 }
