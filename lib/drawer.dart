@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:saku_in/dompet/dompet_page.dart';
+import 'package:saku_in/dompet/page/dompet_page.dart';
 import 'package:saku_in/forum/forum_page.dart';
 import 'package:saku_in/berita/berita_page.dart';
 import 'package:saku_in/kurs/page/kurs_page.dart';
 import 'package:saku_in/donasi/donasi_page.dart';
 import 'package:saku_in/main.dart';
-
 
 class TheSideBar extends StatelessWidget {
   const TheSideBar({super.key});
