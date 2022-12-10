@@ -25,7 +25,7 @@ Forum yang digunakan untuk berdiskusi secara bebas pada kelompok
 
 - Berita Finansial
 
-Berita finansial merupakan berita terkini tentang finansial. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester.
+Berita finansial merupakan berita terkini tentang finansial. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester dan dapat menambah berita finansial dengan method post.
 
 - Kurs
 
