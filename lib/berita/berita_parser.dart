@@ -25,12 +25,13 @@ Future<List<Berita>> fetchBerita() async {
   }
 
   return listWatchList;
+  
 }
 
 void createBerita(String title, String content, String category, String writer,
     String source) async {
-  final response = await http
-      .post(Uri.parse('https://saku-in.up.railway.app/berita/add/'), body: {
+  final response = await http.post(Uri.parse('https://saku-in.up.railway.app/berita/add/'), 
+    body: {
     'title': title,
     'content': content,
     'category': category,
@@ -38,3 +39,10 @@ void createBerita(String title, String content, String category, String writer,
     'source': source,
   });
 }
+
+void deleteBerita(int id) async {
+  final response = await http.post(Uri.parse('https://saku-in.up.railway.app/berita/delete/$id/'), 
+  );
+}
+
+
