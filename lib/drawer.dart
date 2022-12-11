@@ -1,24 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:saku_in/dompet/dompet_page.dart';
-import 'package:saku_in/forum/forum_page.dart';
+import 'package:saku_in/dompet/page/dompet_page.dart';
+import 'package:saku_in/forum/page/forum_page.dart';
+
 import 'package:saku_in/berita/berita_page.dart';
 import 'package:saku_in/kurs/page/kurs_page.dart';
 import 'package:saku_in/donasi/donasi_page.dart';
+import 'package:saku_in/auth/page/login_page.dart';
 import 'package:saku_in/main.dart';
+import 'package:provider/provider.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
 
-
-class TheSideBar extends StatelessWidget {
+class TheSideBar extends StatefulWidget {
   const TheSideBar({super.key});
 
   @override
+  State<TheSideBar> createState() => _TheSideBarState();
+}
+
+class _TheSideBarState extends State<TheSideBar> {
+  @override
   Widget build(BuildContext context) {
+    final request = context.read<CookieRequest>();
     return Drawer(
-      backgroundColor: const Color(0xff03fca1),
       child: Column(
         children: [
           // Menambahkan clickable menu
           ListTile(
-            title: const Text('counter_7'),
+            title: Text(
+              request.jsonData['username'] == null
+                  ? "Not logged in"
+                  : "Log in as ${request.jsonData['username']}",
+            ),
+          ),
+          ListTile(
+            title: const Text('Homepage'),
             onTap: () {
               // Route menu ke halaman utama
               Navigator.pushReplacement(
@@ -78,6 +93,27 @@ class TheSideBar extends StatelessWidget {
               );
             },
           ),
+          !request.loggedIn
+              ? ListTile(
+                  title: const Text('Login'),
+                  onTap: () {
+                    // Route menu ke halaman form
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginPage()),
+                    );
+                  },
+                )
+              : ListTile(
+                  title: const Text('Logout'),
+                  onTap: () async {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => const MyApp()));
+                    final response = await request.logout(
+                        "https://saku-in.up.railway.app/authentication/logout");
+                  },
+                )
         ],
       ),
     );

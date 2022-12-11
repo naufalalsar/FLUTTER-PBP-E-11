@@ -25,11 +25,11 @@ Forum yang digunakan untuk berdiskusi secara bebas pada kelompok
 
 - Berita Finansial
 
-Berita finansial merupakan berita terkini tentang finansial. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester.
+Berita finansial merupakan berita terkini tentang finansial. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester dan dapat menambah berita finansial dengan method post.
 
 - Kurs
 
-Untuk mengkonversi satu mata uang ke uang mata lainnya serta menampilkan tabel daftar konversi mata uang. Data kurs diambil dari backend django yang telah dibuat pada tugas proyek tengah semester sebelumnya
+Menampilkan data kurs negara G-20. Data kurs diambil dari backend django yang telah dibuat pada tugas proyek tengah semester sebelumnya.
 
 - Donasi
 
