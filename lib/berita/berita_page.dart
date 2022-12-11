@@ -336,20 +336,22 @@ class _MyDataState extends State<BeritaPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Berita"),
-        ),
-        // Menambahkan drawer menu
-        drawer: TheSideBar(),
-        bottomSheet: Container(
-          width: MediaQuery.of(context).size.width,
-          child: ElevatedButton(
-            child: Text('Add Berita'),
-            onPressed: () {
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [Text("Berita"),ElevatedButton.icon(
+                        onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => MyFormPage()));
             },
-          ),
+                        icon: const Icon(Icons.add_box),
+                        label: const Text('Tambah Berita'),
+                      ),],
+                  
+                
         ),
+        ),
+        // Menambahkan drawer menu
+        drawer: TheSideBar(),
         body: FutureBuilder(
           future: fetchBerita(),
           builder: ((context, snapshot) {
