@@ -38,6 +38,20 @@ class DetailBerita extends StatelessWidget {
           const SizedBox(height: 10),
           Text("Source : " + thisBerita.fields.source),
           const SizedBox(height: 10),
+          TextButton(
+            child: const Text("Delete"),
+            onPressed: () {
+              deleteBerita(thisBerita.pk);
+              Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const BeritaPage()),
+                    );
+                  },
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.red),
+            ),
+          ),
         ]),
       ),
       bottomNavigationBar: TextButton(
@@ -45,6 +59,9 @@ class DetailBerita extends StatelessWidget {
         onPressed: () {
           Navigator.pop(context);
         },
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.blue),
+        ),
       ),
     );
   }
@@ -266,11 +283,13 @@ class _MyFormPageState extends State<MyFormPage> {
                               shrinkWrap: true,
                               children: <Widget>[
                                 Center(
-                                    child:
-                                        const Text('Berhasil Menambah Data!', style: TextStyle(fontSize: 20),)),
+                                    child: const Text(
+                                  'Berhasil Menambah Data!',
+                                  style: TextStyle(fontSize: 20),
+                                )),
                                 TextButton(
                                   style: TextButton.styleFrom(
-                                  backgroundColor: Colors.yellow,
+                                    backgroundColor: Colors.yellow,
                                   ),
                                   onPressed: () {
                                     Navigator.pop(context);
@@ -278,8 +297,8 @@ class _MyFormPageState extends State<MyFormPage> {
                                   child: Text('Kembali Menambah Berita'),
                                 ),
                                 TextButton(
-                                    style: TextButton.styleFrom(
-                                  backgroundColor: Colors.red,
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: Colors.red,
                                   ),
                                   onPressed: () {
                                     Navigator.pushReplacement(

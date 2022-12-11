@@ -33,7 +33,7 @@ class _TheSideBarState extends State<TheSideBar> {
             ),
           ),
           ListTile(
-            title: const Text('counter_7'),
+            title: const Text('Homepage'),
             onTap: () {
               // Route menu ke halaman utama
               Navigator.pushReplacement(
