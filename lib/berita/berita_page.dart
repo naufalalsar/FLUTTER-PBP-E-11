@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:saku_in/berita/berita_parser.dart';
 import 'package:saku_in/drawer.dart';
 import 'package:saku_in/berita/berita_model.dart';
+import 'package:provider/provider.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
 
 class BeritaPage extends StatefulWidget {
   const BeritaPage({super.key});
@@ -11,57 +13,100 @@ class BeritaPage extends StatefulWidget {
 }
 
 class DetailBerita extends StatelessWidget {
+  
   final Berita thisBerita;
 
   const DetailBerita({Key? key, required this.thisBerita}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final request = context.read<CookieRequest>();
     return Scaffold(
       appBar: AppBar(title: const Text('Detail Berita')),
       drawer: TheSideBar(),
       body: Container(
         alignment: Alignment.center,
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(
-            thisBerita.fields.title,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-          ),
-          const SizedBox(height: 10),
-          Text(thisBerita.fields.content),
-          const SizedBox(height: 10),
-          Text("Category : " + thisBerita.fields.category),
-          const SizedBox(height: 10),
-          Text("Added : " + thisBerita.fields.date.toString().substring(0, 10)),
-          const SizedBox(height: 10),
-          Text("Writer : " + thisBerita.fields.writer),
-          const SizedBox(height: 10),
-          Text("Source : " + thisBerita.fields.source),
-          const SizedBox(height: 10),
+        child: SingleChildScrollView(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Text(
+              thisBerita.fields.title,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            ),
+            const SizedBox(height: 10),
+            Text(thisBerita.fields.content),
+            const SizedBox(height: 10),
+            Text("Category : " + thisBerita.fields.category),
+            const SizedBox(height: 10),
+            Text("Added : " + thisBerita.fields.date.toString().substring(0, 10)),
+            const SizedBox(height: 10),
+            Text("Writer : " + thisBerita.fields.writer),
+            const SizedBox(height: 10),
+            Text("Source : " + thisBerita.fields.source),
+            const SizedBox(height: 10),
+          ]),
+        ),
+      ),
+      bottomNavigationBar: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
           TextButton(
-            child: const Text("Delete"),
+            child: const Text("Back"),
             onPressed: () {
-              deleteBerita(thisBerita.pk);
-              Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const BeritaPage()),
-                    );
-                  },
+              Navigator.pop(context);
+            },
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.red),
+              backgroundColor: MaterialStateProperty.all(Colors.blue),
             ),
           ),
-        ]),
-      ),
-      bottomNavigationBar: TextButton(
-        child: const Text("Back"),
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.blue),
-        ),
+          if(request.jsonData['username'] != null) TextButton(
+              child: const Text("Delete"),
+              onPressed: () {
+                deleteBerita(thisBerita.pk);
+                showDialog(
+                      context: context,
+                      builder: (context) {
+                        return Dialog(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          elevation: 15,
+                          child: Container(
+                            child: ListView(
+                              padding:
+                                  const EdgeInsets.only(top: 20, bottom: 20),
+                              shrinkWrap: true,
+                              children: <Widget>[
+
+                                Text("Berhasil menghapus berita!", style: TextStyle(fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                                TextButton(
+
+                                  style:  ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),),
+
+
+                                 
+                                  onPressed: () {
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const BeritaPage()),
+                                    );
+                                  },
+                                  child: Text('OK'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                    },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.red),
+              ),
+            ),
+        ],
       ),
     );
   }
@@ -334,11 +379,12 @@ class _MyFormPageState extends State<MyFormPage> {
 class _MyDataState extends State<BeritaPage> {
   @override
   Widget build(BuildContext context) {
+    final request = context.read<CookieRequest>();
     return Scaffold(
         appBar: AppBar(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Text("Berita"),ElevatedButton.icon(
+            children: [Text("Berita"),if(request.jsonData['username'] != null)ElevatedButton.icon(
                         onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => MyFormPage()));
