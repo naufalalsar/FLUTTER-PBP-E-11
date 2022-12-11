@@ -16,23 +16,24 @@ class _MyDataState extends State<ForumPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Forum"),
+          title:  Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [Text("Forum"),ElevatedButton.icon(
+                        onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => FormForum()));
+            },
+                        icon: const Icon(Icons.add_box),
+                        label: const Text('Tambah Forum'),
+                      ),],
+                    
+        ),
         ),
         // Menambahkan drawer menu
         backgroundColor: const Color(0xff03fca1),
         drawer: TheSideBar(),
-        body: Column(
-          children: [
-            ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => FormForum()));
-                        },
-                        icon: const Icon(Icons.add_box),
-                        label: const Text('Tambah'),
-                      ),
+       
+        body: 
             FutureBuilder(
                 future: fetchToDo(),
                 builder: (context, AsyncSnapshot snapshot) {
@@ -106,7 +107,7 @@ class _MyDataState extends State<ForumPage> {
                     }
                   }
                 }),
-          ],
-        ));
+          
+        );
   }
   }
