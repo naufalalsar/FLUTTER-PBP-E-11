@@ -4,6 +4,7 @@ import 'package:saku_in/forum/forum_page.dart';
 import 'package:saku_in/berita/berita_page.dart';
 import 'package:saku_in/kurs/page/kurs_page.dart';
 import 'package:saku_in/donasi/donasi_page.dart';
+import 'package:saku_in/auth/page/login_page.dart';
 import 'package:saku_in/main.dart';
 
 class TheSideBar extends StatelessWidget {
@@ -74,6 +75,16 @@ class TheSideBar extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const DompetPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Login'),
+            onTap: () {
+              // Route menu ke halaman form
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginPage()),
               );
             },
           ),
