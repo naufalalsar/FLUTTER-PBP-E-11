@@ -9,7 +9,6 @@ class DetailKursPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xff03fca1),
         appBar: AppBar(
           title: const Text("Kurs"),
         ),
