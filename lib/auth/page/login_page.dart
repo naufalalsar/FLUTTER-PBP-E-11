@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:saku_in/drawer.dart';
-import 'package:saku_in/dompet/page/dompet_page.dart';
 import 'package:saku_in/auth/page/register_page.dart';
+import 'package:saku_in/main.dart';
+import 'package:saku_in/toast.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,11 +15,23 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
-  final _usernameController = TextEditingController();
-  final _passwordController = TextEditingController();
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  bool isPasswordVisible = false;
+
+  void clear() {
+    // Clean up the controller when the widget is disposed.
+    usernameController.clear();
+    passwordController.clear();
+
+    // super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    final request = context.read<CookieRequest>();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
@@ -31,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               const SizedBox(height: 40),
               TextFormField(
-                controller: _usernameController,
+                controller: usernameController,
                 decoration: const InputDecoration(
                   icon: Icon(Icons.person),
                   hintText: 'Username',
@@ -43,9 +58,11 @@ class _LoginPageState extends State<LoginPage> {
                   }
                   return null;
                 },
+                obscureText: false,
               ),
               TextFormField(
-                controller: _passwordController,
+                controller: passwordController,
+                obscureText: true,
                 decoration: const InputDecoration(
                   icon: Icon(Icons.lock),
                   hintText: 'Password',
@@ -60,17 +77,29 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 40),
               ElevatedButton(
-                onPressed: () {
+                onPressed: () async {
                   if (_formKey.currentState!.validate()) {
-                    // Route menu ke halaman form
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const DompetPage()),
-                    );
+                    print("login");
+                    final response = await request.login(
+                        "https://saku-in.up.railway.app/authentication/login/", {
+                      'username': usernameController.text,
+                      'password': passwordController.text,
+                    }).then((response) => {
+                          if (response['status'])
+                            {
+                              request.jsonData = response['user_data'],
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => 
+                                          const MyHomePage(title: 'Saku In'))),
+                            }
+                          else
+                            {toast(context, true, response['message'])}
+                        });
                   }
                 },
-                child: const Text('Submit'),
+                child: const Text('Login'),
               ),
               // register button that redirects to register page
               ElevatedButton(
