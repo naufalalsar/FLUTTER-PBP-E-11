@@ -19,6 +19,7 @@ class _MyDataState extends State<ForumPage> {
           title: Text("Forum"),
         ),
         // Menambahkan drawer menu
+        backgroundColor: const Color(0xff03fca1),
         drawer: TheSideBar(),
         body: Column(
           children: [
@@ -29,7 +30,7 @@ class _MyDataState extends State<ForumPage> {
                               MaterialPageRoute(
                                   builder: (context) => FormForum()));
                         },
-                        icon: const Icon(Icons.add),
+                        icon: const Icon(Icons.add_box),
                         label: const Text('Tambah'),
                       ),
             FutureBuilder(
@@ -71,7 +72,7 @@ class _MyDataState extends State<ForumPage> {
                                       borderRadius: BorderRadius.circular(15.0),
                                       boxShadow: const [
                                         BoxShadow(
-                                            color: Colors.black, blurRadius: 2.0)
+                                            color: Color.fromARGB(255, 255, 255, 255), blurRadius: 7.0)
                                       ]),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,

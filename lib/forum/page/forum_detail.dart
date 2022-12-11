@@ -13,6 +13,7 @@ class ForumDetail extends StatelessWidget {
       appBar: AppBar(
         title: Text('Detail'),
       ),
+      backgroundColor: const Color(0xff03fca1),
       drawer: TheSideBar(),
       body: Container(
         margin: new EdgeInsets.symmetric(vertical: 20.0),

@@ -25,6 +25,7 @@ class _FormForumState extends State<FormForum> {
       appBar: AppBar(
         title: const Text('Tambah Forum'),
       ),
+      backgroundColor: const Color(0xff03fca1),
       drawer: TheSideBar(),
       body: Form(
         key: _formKey,
@@ -41,7 +42,7 @@ class _FormForumState extends State<FormForum> {
                       hintText: "Contoh: Ekonomi",
                       labelText: "Judul",
                       // Menambahkan icon agar lebih intuitif
-                      icon: const Icon(Icons.note_alt),
+                      icon: const Icon(Icons.chat_bubble),
                       // Menambahkan circular border agar lebih rapi
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0),
@@ -75,7 +76,7 @@ class _FormForumState extends State<FormForum> {
                       hintText: "Contoh: Kenaikan BBM",
                       labelText: "Isi",
                       // Menambahkan icon agar lebih intuitif
-                      icon: const Icon(Icons.attach_money),
+                      icon: const Icon(Icons.forum),
                       // Menambahkan circular border agar lebih rapi
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0),
