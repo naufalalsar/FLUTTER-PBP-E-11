@@ -1,6 +1,6 @@
 // To parse this JSON data, do
 //
-//     final myWatchList = myWatchListFromJson(jsonString);
+//     final myWatchList = DonasiFromJson(jsonString);
 
 import 'dart:convert';
 
@@ -36,7 +36,6 @@ class Donasi {
 
 class Fields {
   Fields({
-    this.user = 1,
     required this.title,
     required this.description,
     required this.target,
@@ -44,7 +43,6 @@ class Fields {
     required this.isOngoing,
   });
 
-  int user;
   String title;
   String description;
   int target;
@@ -52,7 +50,6 @@ class Fields {
   bool isOngoing;
 
   factory Fields.fromJson(Map<String, dynamic> json) => Fields(
-        user: json["user"],
         title: json["title"],
         description: json["description"],
         target: json["target"],
@@ -61,7 +58,6 @@ class Fields {
       );
 
   Map<String, dynamic> toJson() => {
-        "user": user,
         "title": title,
         "description": description,
         "target": target,

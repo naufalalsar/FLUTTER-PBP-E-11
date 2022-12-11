@@ -84,7 +84,7 @@ class _MyDataState extends State<DonasiPage> {
               child: Container(
                 margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                 child: const Text(
-                  "Daftar Donasi",
+                  "Daftar Donasi Tersedia",
                   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                 ),
               ),
@@ -137,7 +137,7 @@ class _MyDataState extends State<DonasiPage> {
                                         Align(
                                           alignment: Alignment.topLeft,
                                           child: Text(
-                                            snapshot.data[index]!.fields.title,
+                                            snapshot.data[index].fields.title,
                                             textAlign: TextAlign.left,
                                             overflow: TextOverflow.ellipsis,
                                             style: const TextStyle(
