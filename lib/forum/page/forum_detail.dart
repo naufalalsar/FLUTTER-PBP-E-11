@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:saku_in/drawer.dart';
 import 'package:saku_in/forum/util/fetch_forum_data.dart';
 import 'package:saku_in/forum/model/forum.dart';
+import 'package:saku_in/forum/page/forum_page.dart';
 
 class ForumDetail extends StatelessWidget {
   final  Forum data;
@@ -43,7 +44,20 @@ class ForumDetail extends StatelessWidget {
                         TextStyle(fontWeight: FontWeight.normal, fontSize: 16)),
               ],
             ),
-          ],
+          TextButton(
+            child: const Text("Delete"),
+            onPressed: () {
+              deleteForum(data.pk);
+              Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ForumPage()),
+                    );
+                  },
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.red),
+            ),
+          ),],
         ),
       ),
       persistentFooterButtons: [
@@ -62,5 +76,6 @@ class ForumDetail extends StatelessWidget {
         ),
       ],
     );
+    
   }
 }

@@ -24,3 +24,10 @@ Future<List<Forum>> fetchToDo() async {
 
   return listForum;
 }
+
+void deleteForum(int id) async {
+  final response = await http.post(
+    Uri.parse('https://saku-in.up.railway.app/forum/deleteforum/$id'),
+  );
+  print(response);
+}
