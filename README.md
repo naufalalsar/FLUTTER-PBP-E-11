@@ -1,6 +1,6 @@
 # Tugas Kelompok PBP
 
-# Link aplikasi : https://appdistribution.firebase.google.com/testerapps/1:1049216663653:android:5be9a2c61d2d91d87a868c/releases/29ha6gbjlg4n8
+# Link aplikasi : https://appdistribution.firebase.dev/i/ff71faae6007a70e
 
 ## Kelompok PBP E-11 :
 
