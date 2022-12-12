@@ -1,5 +1,7 @@
 # Tugas Kelompok PBP
 
+# Link aplikasi : https://appdistribution.firebase.google.com/testerapps/1:1049216663653:android:5be9a2c61d2d91d87a868c/releases/29ha6gbjlg4n8
+
 ## Kelompok PBP E-11 :
 
 - Mohammad Ferry Husnil Arif (2106709112)
@@ -25,7 +27,7 @@ Forum yang digunakan untuk berdiskusi secara bebas pada kelompok
 
 - Berita Finansial
 
-Berita finansial merupakan berita terkini tentang finansial. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester dan dapat menambah berita finansial dengan method post.
+Berita finansial merupakan berita terkini tentang finansial. Untuk berita akan dilakukan pengambilan dengan menggunakan get ke proyek tengah semester dan dapat menambah/menghilangkan berita finansial dengan method post.
 
 - Kurs
 
