@@ -1,3 +1,4 @@
+import 'package:saku_in/forum/page/forum_page.dart';
 import 'package:saku_in/main.dart';
 import 'package:saku_in/drawer.dart';
 import 'package:saku_in/forum/model/forum.dart';
@@ -156,16 +157,35 @@ class _FormForumState extends State<FormForum> {
                                                 child: Column(children: [
                                                   Text('Judul: $_title'),
                                                   Text('Isi: $_content'),
-                                                ])),
-                                          ],
+                                                ])),TextButton(
+                                      style: TextButton.styleFrom(
+                                        backgroundColor: Color.fromARGB(255, 27, 178, 165),
+                                      ),
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child:
+                                          const Text('Kembali Menambah Forum'),
+                                    ),
+                                          
+                                          TextButton(
+                                      style: TextButton.styleFrom(
+                                        backgroundColor: Color.fromARGB(255, 38, 218, 53),
+                                      ),
+                                      onPressed: () {
+                                        Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ForumPage()),
+                                        );
+                                      },
+                                      child: const Text(
+                                          'Kembali Ke Daftar Forum'),
+                                    ),],
                                         )),
                                         SizedBox(height: 20),
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                          child: Text('Kembali'),
-                                        ),
+                                        
                                       ],
                                     ),
                                   ),
@@ -195,12 +215,7 @@ class _FormForumState extends State<FormForum> {
                                           ],
                                         )),
                                         SizedBox(height: 20),
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                          child: Text('Kembali'),
-                                        ),
+                                        
                                       ],
                                     ),
                                   ),
