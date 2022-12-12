@@ -3,6 +3,8 @@ import 'package:saku_in/drawer.dart';
 import 'package:saku_in/forum/util/fetch_forum_data.dart';
 import 'package:saku_in/forum/page/forum_detail.dart';
 import 'package:saku_in/forum/page/create_forum.dart';
+import 'package:provider/provider.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
 
 class ForumPage extends StatefulWidget {
   const ForumPage({super.key});
@@ -14,11 +16,12 @@ class ForumPage extends StatefulWidget {
 class _MyDataState extends State<ForumPage> {
   @override
   Widget build(BuildContext context) {
+    final request = context.read<CookieRequest>();
     return Scaffold(
         appBar: AppBar(
           title:  Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Text("Forum"),ElevatedButton.icon(
+            children: [Text("Forum"),   if(request.jsonData['username'] != null)  ElevatedButton.icon(
                         onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => FormForum()));

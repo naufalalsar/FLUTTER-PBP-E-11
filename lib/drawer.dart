@@ -83,7 +83,7 @@ class _TheSideBarState extends State<TheSideBar> {
               );
             },
           ),
-          ListTile(
+          if(request.jsonData['username'] != null) ListTile(
             title: const Text('Dompet'),
             onTap: () {
               // Route menu ke halaman form
